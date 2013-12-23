@@ -178,6 +178,10 @@ function abs(value) {
   return value < 0 ? value * -1 : value;
 }
 
+function average(op1,op2) {
+  return (op1 + op2) / 2
+}
+
 function modulo(op2) 
 {
   function helper(op1) {
@@ -198,7 +202,7 @@ function calculateintervalsfromfirst(numberarray)
 {
   var intervals = [numberarray.length -1]
   for(var i = 1; i < numberarray.length; i++)
-    intervals[i] = (numberarray[0] - numberarray[i - 1])
+    intervals[i] = (numberarray[i] - numberarray[i - 1])
   return intervals;
 }
 

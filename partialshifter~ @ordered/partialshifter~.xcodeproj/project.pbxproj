@@ -10,18 +10,19 @@
 		0415042617B5556E0046B3C8 /* partialshifter~.c in Sources */ = {isa = PBXBuildFile; fileRef = 0415042417B5556E0046B3C8 /* partialshifter~.c */; };
 		0415042817B555D60046B3C8 /* d_fft_mayer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0415042717B555D60046B3C8 /* d_fft_mayer.c */; };
 		046ADD8917B88B5000E310A4 /* noise-table.h in Headers */ = {isa = PBXBuildFile; fileRef = 046ADD8817B88B5000E310A4 /* noise-table.h */; };
-		22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */; };
-		2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54266BCE05E6E9780000000C /* MaxAPI.framework */; };
+		04759191180511B90080E820 /* maxmspsdk.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 04759190180511B90080E820 /* maxmspsdk.xcconfig */; };
+		04759193180511FC0080E820 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04759192180511FC0080E820 /* MaxAudioAPI.framework */; };
+		047591951805121C0080E820 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047591941805121C0080E820 /* MaxAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0415042417B5556E0046B3C8 /* partialshifter~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "partialshifter~.c"; sourceTree = "<group>"; };
 		0415042717B555D60046B3C8 /* d_fft_mayer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = d_fft_mayer.c; sourceTree = "<group>"; };
 		046ADD8817B88B5000E310A4 /* noise-table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "noise-table.h"; sourceTree = "<group>"; };
-		22CF10220EE984600054F513 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../../maxmspsdk.xcconfig; sourceTree = SOURCE_ROOT; };
-		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../../c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
-		2FBBEAE508F335360078DB84 /* partialshifter~.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "partialshifter~.mxo"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54266BCE05E6E9780000000C /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../../c74support/max-includes/MaxAPI.framework"; sourceTree = SOURCE_ROOT; };
+		04759190180511B90080E820 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = "../../Coding/MaxSDK-6.1.3/examples/maxmspsdk.xcconfig"; sourceTree = "<group>"; };
+		04759192180511FC0080E820 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../Coding/MaxSDK-6.1.3/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = "<group>"; };
+		047591941805121C0080E820 /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../Coding/MaxSDK-6.1.3/c74support/max-includes/MaxAPI.framework"; sourceTree = "<group>"; };
+		2FBBEAE508F335360078DB84 /* partialshifter~.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "partialshifter~.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,8 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FBBEADE08F335360078DB84 /* MaxAPI.framework in Frameworks */,
-				22CF119E0EE9A82E0054F513 /* MaxAudioAPI.framework in Frameworks */,
+				047591951805121C0080E820 /* MaxAPI.framework in Frameworks */,
+				04759193180511FC0080E820 /* MaxAudioAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +41,7 @@
 		089C166AFE841209C02AAC07 /* iterator */ = {
 			isa = PBXGroup;
 			children = (
-				22CF10220EE984600054F513 /* maxmspsdk.xcconfig */,
+				04759190180511B90080E820 /* maxmspsdk.xcconfig */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
@@ -51,8 +52,8 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				54266BCE05E6E9780000000C /* MaxAPI.framework */,
-				22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */,
+				047591941805121C0080E820 /* MaxAPI.framework */,
+				04759192180511FC0080E820 /* MaxAudioAPI.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -70,7 +71,7 @@
 		19C28FB4FE9D528D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FBBEAE508F335360078DB84 /* partialshifter~.mxo */,
+				2FBBEAE508F335360078DB84 /* partialshifter~.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,7 +106,7 @@
 			);
 			name = "max-external";
 			productName = iterator;
-			productReference = 2FBBEAE508F335360078DB84 /* partialshifter~.mxo */;
+			productReference = 2FBBEAE508F335360078DB84 /* partialshifter~.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -140,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04759191180511B90080E820 /* maxmspsdk.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,23 +173,26 @@
 		2FBBEAD008F335010078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Development;
 		};
 		2FBBEAD108F335010078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Deployment;
 		};
 		2FBBEAE108F335360078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../c74support/msp-includes\"",
+					"\"$(SRCROOT)/../../Coding/MaxSDK-6.1.3/c74support/msp-includes\"",
+					"\"$(SRCROOT)/../../Coding/MaxSDK-6.1.3/c74support/max-includes\"",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -197,12 +202,13 @@
 		};
 		2FBBEAE208F335360078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../c74support/msp-includes\"",
+					"\"$(SRCROOT)/../../Coding/MaxSDK-6.1.3/c74support/msp-includes\"",
+					"\"$(SRCROOT)/../../Coding/MaxSDK-6.1.3/c74support/max-includes\"",
 				);
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				PRODUCT_NAME = "partialshifter~";
