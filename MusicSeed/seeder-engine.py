@@ -17,24 +17,33 @@ def add_midi_event(note, onset, vel, dur):
 def add_state(event):
   pst.add_state(event)
 
-def seed(event = None):
+def seed(index = 0, mode = 'note'):
   global prev_event
-  if event == 1:
-    if mp.events:
-      event = mp.events[0]
+  print 'index', index, 'mode', mode
+  mode = str(mode) 
+  if mp.events:
+    event = mp.events[index]
+    event_hash = event.get_hash(mode)
   if event:
-    print 'event in seeder', event
-    new_event = pst.improvise(event)
-    new_event.outmax(seed_send_class)
-    print 'new event in seeder', new_event
-    prev_event = new_event
-  else:
-    print 'no event found'
+    new_event = pst.improvise(event_hash, mode)
+    if new_event:
+      new_event.outmax(seed_send_class)
+      prev_event = new_event
+      return 'improving!'
+    else:
+      print 'no new_event found'
+  else :
+    print 'no event found at index', index
 
 def bang():
   global prev_event
-  if prev_event:
-    print 'found prev_event'
-    seed(prev_event)
+  if prev_event:        
+    index = mp.events.index(prev_event)
+    seed(index)
   else:
-    seed(1)
+    seed(0)
+
+def set_prev_event(index):
+  global prev_event
+  prev_event = mp.events[index]
+
