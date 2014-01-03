@@ -10,8 +10,7 @@ IMPLEMENT
   implement hashing multiple events
 """
 
-import hashlib
-import random
+import hashlib, random, math
 from nltk import edit_distance
 
 order = 1 # order of markov chain
@@ -27,6 +26,7 @@ prevcollect = []
 # constraint variables
 min_probability = 0.
 max_probability = 1.
+similarityThreshold = 0.8
 threshold = 2
 modes = ['identity', 'note']
 
@@ -38,7 +38,7 @@ def initialize():
   #pst['duration'] = {}
 
 def add_state(curr):
-  global pst, modes
+  global pst, modes, data
   if len(prevlist) == order:   
     
     #create hash element from previous
@@ -76,11 +76,11 @@ def add_state(curr):
   else : 
     prevlist.append(curr)
 
-def improvise(event, mode):
+def improvise(event_hash, mode):
   global prevcollect  
-  prevcollect.append(event)
+  prevcollect.append(event_hash)
   if len(prevcollect) == order:
-    improv = find_event(event, mode)
+    improv = find_event(event_hash, mode)
     if improv != None:
       prevcollect.pop(0)
       return improv
@@ -90,16 +90,26 @@ def improvise(event, mode):
   else:
     print 'order not achieved yet', len(prevcollect)
 
-def find_event(event, mode):
+def find_event(event_hash, mode, metrics = ['probability', 'editdistance']):
+  global min_probability, max_probability, similarityThreshold
   # look for values within the given probability constraints
-  if event in pst[mode]:
-    trans = get_trans_within_probabilities(pst[mode][event], min_probability, max_probability)
-    if len(trans) > 0 :
-      # possibilities within constraints?  
-      index = random.randrange(len(trans))
-      return trans[index]
+  if event_hash in pst[mode]:    
+    trans = []
+    if 'probability' in metrics:
+      trans.extend(get_trans_within_probabilities(pst[mode][event_hash], min_probability, max_probability))
+    if 'editdistance' in metrics:    
+      event = pst[mode][event_hash]['data']
+      trans.extend(get_trans_within_editdistance(event, pst['identity'], mode, similarityThreshold))
+  if len(trans) > 0 :
+    # found possibilities within constraints!
+    index = random.randrange(len(trans))  
+    return trans[index]
   else :
-    print 'find_event found no event'
+    print 'find_event found no event_hash'
+
+#######################
+# CONSTRAINTS METHODS #
+#######################
 
 def get_trans_within_probabilities(events, low_limit, high_limit):
   pool = []
@@ -107,6 +117,23 @@ def get_trans_within_probabilities(events, low_limit, high_limit):
     if (events['trans'][event]['probability']() >= low_limit) & (events['trans'][event]['probability']() <= high_limit):      
       pool.append(events['trans'][event]['data'])
   return pool
+
+def get_trans_within_editdistance(target, events, mode = 'note', similarityThreshold = 0.8):
+  pool = []
+  targetEditData = target.getEditData(mode)
+  for event in events:
+    eventEditData = event.getEditData(mode)    
+    distance = edit_distance(targetEditData, eventEditData)    
+    maxDistance = len(targetEditData) if len(targetEditData) > len(eventEditData) else len(eventEditData)
+    similarity = math.sqrt(1 - (distance * distance) / (maxDistance * maxDistance))
+    
+    if (similarity >= similarityThreshold):      
+      pool.append(event)
+  return pool
+
+#####################
+# STRUCTURE METHODS #
+#####################
 
 def add_node_structure(pst, prev, prev_hash, mode):
   pst[mode][prev_hash] = {}
@@ -140,99 +167,3 @@ def set_modes(values):
 
 #initialize psts
 initialize()
-
-"""
-  #look for values within the LevenshteinDistance threshold
-  else 
-  {
-    post('computing Levenshtein distances')
-    possibilities = []
-    base_key = curr_key.toString()
-    base_key = base_key.split(' ')
-    base_distances = None
-    if(base_key.length > 1) 
-    {# base_key has multiple notes
-      post('base key has more than one note')
-      base_distances = calculateDistances(base_key.map(modulo(12)))# scale to an octave(11 semitones)
-      #convert base_key to char
-      base_key = base_key.map(indexToChar)
-    }
-    else 
-    {#base key has one note
-      post('base key has one note')
-      base_distances = base_key % 12
-      #convert base_key to char
-      base_key= indexToChar(base_key)
-    }
-    # base_key to string
-    base_key = base_key.toString()
-    if(base_distances.length > 1) 
-    {
-      post('base_distances has more than one distance')
-      base_distances = base_distances.map(indexToChar)
-      base_distances.join('') #back into string
-    }
-    else 
-    {
-      post('base_distances has one distance only')
-      base_distances = indexToChar(parseInt(base_distances))
-    }
-    base_distances = base_distances.toString()
-    post('base_key', base_key, 'base_distances', base_distances) 
-    claves = Object.keys(pst)
-    post('claves', claves)
-    
-    for (i = 0 i < claves.length i++)
-    {
-      target = None
-      target_char = claves[i].toString()
-      target_char = target_char.split(' ')
-      post('target_char' , target_char)
-      post('key in list', claves[i])      
-      if(claves[i].length > 1) 
-      { # claves[i] has multiple notes
-        target = claves[i].split(' ')
-        target = target.map(modulo(12)) # scale to an octave(11 semitones)
-        target = calculateDistances(target)
-        target_char = target_char.map(indexToChar)
-      }
-      else #claves[i] has one note
-      {
-        post('claves[i] has one note')
-        target = claves[i] % 12
-        target_char = indexToChar(claves[i])
-      }
-      #target_char to string
-      target_char = target_char.toString()
-      if(target.length > 1) 
-      {
-        post('target has more than one distance')
-        target = target.map(indexToChar)
-      }
-      else
-      {
-        post('has one distance only')
-        target = indexToChar(parseInt(target))
-      }   
-      target = target.toString()
-      post('base_key', base_key, 'target_char', target_char)
-      post('base_distances', base_distances, 'target', target)
-      # compute intervalic distance
-      reldistance = LevenshteinDistance(base_distances, target)
-      absdistance = LevenshteinDistance(base_key, target_char.toString())
-      # compute absolute distance
-      distance = reldistance + absdistance
-      post('reldistance', reldistance)
-      post('absdistance', absdistance) 
-      post('distance', distance) 
-      if(distance < threshold) {
-        possibilities.append(claves[i])            
-      }
-    }
-    if (possibilities.length > 0) 
-    { # possibilities within constraints?
-      index = get_random_int(0, possibilities.length - 1)
-      outlet(0, possibilities[index])
-    } else {
-      outlet(0, '-1')
-  """
