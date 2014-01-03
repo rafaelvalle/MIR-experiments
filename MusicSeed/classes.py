@@ -32,8 +32,8 @@ class Event:
     if mode == 'identity':
       return self
     elif mode == 'note':      
-      for item in self.data :
-        list2hash.append(item.pitch)
+      for note in self.data :
+        list2hash.append(note.pitch)
       return hash(tuple(list2hash))
     elif mode == 'intervals':      
       return hash(tuple(self.intervals))
@@ -58,6 +58,22 @@ class Event:
     else:      
       send_class.send(('/event/note', self.data[0].pitch, self.data[0].vel, self.data[0].dur))
 
+  def getEditData(self, mode):  
+    if mode == 'note':      
+      edString = []
+      for note in self.data:
+        edString.append(chr(97 + (note.pitch % 12))) #a...l
+      return edString
+    elif mode == 'intervals':
+      edString = []
+      for interval in self.intervals:
+        edString.append(chr(97 + (interval % 25))) #a ... z
+      return edString
+    elif mode == 'distance':
+      return bin(self.distance)
+    else:
+      print 'mode not found'
+
 class Note:
   'common base class for note'
 
@@ -68,3 +84,5 @@ class Note:
   
   def __hash__(self):
     return hash((self.pitch, self.dur))
+
+#HELPER
