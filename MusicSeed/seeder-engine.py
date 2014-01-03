@@ -47,3 +47,6 @@ def set_prev_event(index):
   global prev_event
   prev_event = mp.events[index]
 
+def setEDistanceLimit(value):  
+  pst.ed_limit = value
+
