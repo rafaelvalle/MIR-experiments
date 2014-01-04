@@ -1,3 +1,10 @@
+"""
+TOOLS
+Tools used in Music Seeds engine
+"""
+
+import shelve
+
 try :
   import pyext
 except:
@@ -16,5 +23,16 @@ def roundto(number, multiple):
 def debug(debugging, message):
   if debugging:
     print message
+
+def save_data(data, filename, key):
+    file = shelve.open(filename)
+    file[key] = data
+    file.close()
+
+def load_data(filename, key, variable):
+    file = shelve.open(filename)
+    variable = file[key]
+    file.close()
+    return variable
 
 send_class = SendClass()
