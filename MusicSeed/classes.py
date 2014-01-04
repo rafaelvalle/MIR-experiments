@@ -1,6 +1,3 @@
-import hashlib
-import tools
-
 """
 Music Seeds Classes
 
@@ -10,6 +7,9 @@ Class Event
   Spectral event subclass
   
 """
+
+import hashlib
+import tools
 
 class Event:
   'common base class for event'
@@ -84,5 +84,3 @@ class Note:
   
   def __hash__(self):
     return hash((self.pitch, self.dur))
-
-#HELPER
