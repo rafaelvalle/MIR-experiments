@@ -1,0 +1,27 @@
+inlets = 1;
+outlets = 1;
+
+var curr_motif = {}
+var motif_set = {};
+var ratio = 2;
+var curr_motif_count = 0;
+
+function msg_float(args){
+    if (curr_motif.empty()) {
+	add_duration(args[0]);
+    } else {
+	if (args[0]*ratio >= motifset[curr_motif_count].length) {
+	    
+	    
+    
+}
+
+function add_duration(duration){
+    curr_motif.append(duration);
+    post("added", duration, " to motif");
+}
+
+function add_motif(motif) {
+    motif_set.append(motif);
+    post("added", motif, " to motif set");
+

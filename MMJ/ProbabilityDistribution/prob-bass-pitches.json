@@ -1,0 +1,17 @@
+{
+	"pattrstorage" : 	{
+		"name" : "bass-pitch-prob",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"pitchprob" : [ -1 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

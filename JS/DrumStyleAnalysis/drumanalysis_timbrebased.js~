@@ -1,0 +1,231 @@
+/*
+Drum analysis 0.1a
+Rafael Valle, 2013
+
+Beat synchronous patterns
+Each drum model has a number of sectionof
+Each section has a drum pattern
+Each drum pattern has a number of beats
+Each beat has a number of steps. 
+Each step has information on step deviation and a number of timbres
+Each deviation has a 
+Each timbre has the following probability tables 
+    Onset
+    Amplitude
+    Articulation
+
+TODO
+Calculate probabilities
+method to interpolate between probabilities
+methods to define articulation
+methods to calculate deviation from onset
+methods to identify timbre in timbre
+methods to implement dynamic beat size / timesteps?
+does amplitude and articulation take care of beat division?
+articulation x timestep (maybe use timber to track categorize?)
+*/
+
+//jsthis properties
+inlets = 1;
+outlets = 1;
+
+// global variables
+var timesteps = 4;
+var tempo = 60;
+
+var counter = 1;
+var counter_limit = timesteps; 
+var steps_visit; // array to monitor how many times each step was visited
+var step_array; //an array of step dictionaries
+var voices_dict; //dictionary with voices
+var amplitude_music = ['pppp', 'ppp', 'pp', 'p', 'mp', 'mf', 'f', 'ff', 'fff', 'ffff']
+var learning_rate = 1;
+var update_rate_add = 1*learning_rate; //learning_rate is not a pointer and must be updated, right?
+var update_rate_mul = 2;
+var update_method = 'ADD';
+
+
+function bang() {
+		increase_counter(1);
+		update_steps_visit(counter);
+}
+
+function anything() { 
+    var args = arrayfromargs(messagename, arguments);
+    switch(messagename) {
+    case 'update':
+	args.shift()
+	calculate_probabilities(arguments[0], counter, arguments[1], arguments[2], arguments[3]);
+	break;
+    default:
+	post('method is not defined');
+	break;
+    }
+}
+
+function calculate_probabilities(timestep, timbre, amplitude, articulation) {
+    post('timestep is', timestep, '\n');
+    post('timbre is', timbre,'\n');
+    post('amplitude is', amplitude,'\n');
+    post('articulation is', articulation,'\n');
+
+    switch(update_method) {
+    case 'ADD':
+	//update onset
+	voices_dict[voice][counter].onsets += update_rate_add;
+	
+	//update timbre
+	voices_dict[voice][counter].timbres[timbre] += update_rate_add;
+	
+	//update amplitude
+	musical_amp = calc_musical_amplitude(amplitude);
+	voices_dict[voice][counter].amplitudes[musical_amp] += update_rate_add;
+	break;
+    
+	case 'MUL':
+	break;
+    
+	default:
+	post('no update method was defined');
+	break;
+    }
+}
+
+function update_timbre(voice, timestep, timbre){};
+function update_amplitude(voice, timestep, timbre){};
+function update_articulation(voice, timestep, timbre){};	
+
+function update_steps_visit(curr_counter) {
+    if(steps_visit) {
+	//post('previsit = ', steps_visit[curr_counter - 1], '\n');
+	steps_visit[curr_counter - 1] += 1;
+	//post('postvisit = ',steps_visit[curr_counter - 1], '\n');
+    } else {
+	post('step array not initialized \n');
+    }
+}
+
+function increase_counter(increase) { //use % + 1 instead?
+    if (counter + 1 > counter_limit) {
+	counter = 1;
+    } else {
+	counter += increase;
+    }
+    //post('counter = ', counter, '\n')
+} 
+
+function calc_musical_amplitude(amplitude) {
+    var rounded = Math.round(amplitude*9);
+    return amplitude_music[rounded]
+}
+
+function calc_musical_articulation(duration, tempo) {
+    post(duration);
+    post(tempo);
+}
+
+//CONSTRUCTOR
+function main() {	
+    steps_visit = gen_steps_visit(timesteps);
+    
+    var articulation_struct = null;
+    var dynamic_struct = gen_struct_dynamic();
+    var timbres_struct = gen_struct_timbres(dynamic_struct, articulation_struct);		
+    
+    
+    
+    
+    
+
+    //	var step_struct = gen_struct_step(timbres_lf, amplitudes);
+    
+    step_array = gen_array_steps(timesteps, timbres_struct);
+    
+    /*
+      post(voice1.steps[0].visits);
+      post(voice1.steps[0].onsets);
+      post(voice1.steps[1].visits);
+      post(voice1.steps[1].onsets);
+      voice1.steps[0].visits = 1;
+      voice1.steps[0].onsets = 2;
+      
+      post(voice1.steps[0].visits);
+      post(voice1.steps[0].onsets);
+      post(voice1.steps[1].visits);
+      post(voice1.steps[1].onsets);
+      
+      post(step_array[0].visits);
+      post(step_array[1].visits);
+      post(step_array[2].visits);
+      post(step_array[3].visits);
+    */
+    
+}
+
+/*
+METHODS TO GENERATE STRUCTURES
+Make all methods dynamic...
+*/
+
+function gen_dict(key, value) {
+    var dict = {
+    	key: value, 
+    };
+    return dict;
+}
+
+function gen_struct_dynamic() {
+    var struct_dynamic = {
+	pppp: 0,
+	ppp: 0,
+	pp: 0,
+	p: 0,
+	mp: 0,
+	mf: 0,
+	f: 0,
+	ff: 0,
+	fff: 0, 
+	ffff: 0,
+	total: 0 
+    };
+    return struct_dynamic;
+}
+
+function gen_struct_timbre(timestep, dynamic_struct, articulation_struct) {
+    var timbre_struct = {
+    	onsets: 0, //number of times there was an onset during this step
+	visits: steps_visit[timestep], //pointer to number of times this step was "visited"
+	probability: 0, // onsets divided by visits - fix division by null
+	articulation: articulation_struct,
+	dynamic: dynamic_struct,
+    };
+    timbre_struct.probability = timbre_struct.onsets/timbre_struct.onsets
+    return timbres_struct;
+}
+
+function gen_struct_step(timestep, timbres_dict, dynamic_struct, articulation_struct) {
+    var step_struct = {
+	timbre: gen_struct_timbre(timestep, dynamic_struct, articulation_struct)
+	//amplitude, articulation and other features are part of the timbre structure
+    };
+    return step_struct;
+}
+
+function gen_array_steps(steps, timbres) {
+    array = new Array();
+    for (i = 0; i < steps; i++) {
+	array.push(gen_struct_step(i, timbres, amplitudes));
+    }
+    return array;
+}
+
+function gen_steps_visit(timesteps) {
+    array = new Array(timesteps)
+    for (i = 0; i < timesteps; i++) {
+	array[i] = 0;
+    }
+    return array
+}
+
+//start on load
+main();

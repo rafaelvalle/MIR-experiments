@@ -1,0 +1,329 @@
+{
+	"pattrstorage" : 	{
+		"name" : "timbreprob[1]",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"5" : 			{
+				"id" : 5,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"6" : 			{
+				"id" : 6,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"7" : 			{
+				"id" : 7,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"8" : 			{
+				"id" : 8,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"9" : 			{
+				"id" : 9,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"10" : 			{
+				"id" : 10,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"11" : 			{
+				"id" : 11,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"12" : 			{
+				"id" : 12,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"13" : 			{
+				"id" : 13,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"14" : 			{
+				"id" : 14,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"15" : 			{
+				"id" : 15,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"16" : 			{
+				"id" : 16,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"17" : 			{
+				"id" : 17,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"18" : 			{
+				"id" : 18,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"19" : 			{
+				"id" : 19,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"20" : 			{
+				"id" : 20,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"21" : 			{
+				"id" : 21,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"22" : 			{
+				"id" : 22,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"23" : 			{
+				"id" : 23,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"24" : 			{
+				"id" : 24,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"25" : 			{
+				"id" : 25,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"26" : 			{
+				"id" : 26,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"27" : 			{
+				"id" : 27,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"28" : 			{
+				"id" : 28,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"29" : 			{
+				"id" : 29,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"30" : 			{
+				"id" : 30,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"31" : 			{
+				"id" : 31,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+,
+			"32" : 			{
+				"id" : 32,
+				"data" : 				{
+					"timbre-prob-1[1]" : [ 0, 100 ],
+					"timbre-prob-2[1]" : [ 0, 100 ],
+					"timbre-prob-2[2]" : [ 0, 100 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
