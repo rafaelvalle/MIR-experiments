@@ -5,11 +5,9 @@ IMPLEMENT:
 Class Event
   Note event subclass
   Spectral event subclass
-  
 """
 
 import hashlib
-import tools
 
 class Event:
   'common base class for event'
@@ -22,7 +20,7 @@ class Event:
     self.data = data
     self.intervals = intervals
     Event.count += 1
-  
+
   def __hash__(self):
     return hash(tuple(self.data)) #identity hash
 
@@ -31,18 +29,18 @@ class Event:
     list2hash = []
     if mode == 'identity':
       return self
-    elif mode == 'note':      
+    elif mode == 'note':
       for note in self.data :
         list2hash.append(note.pitch)
       return hash(tuple(list2hash))
-    elif mode == 'intervals':      
+    elif mode == 'intervals':
       return hash(tuple(self.intervals))
     elif mode == 'distance':
-      return tools.roundto(self.distace, resolution)
+      return self.distance + resolution/2 - (self.distance + resolution/2) % resolution
     else:
       print 'mode not found'
-  
-  def updateIntervals(self):    
+
+  def updateIntervals(self):
     if len(self.data) > 1:
       #to avoid adding intervals already added
       if len(self.intervals) == len(self.data) - 2:
@@ -53,22 +51,22 @@ class Event:
     if len(self.data) > 1:
       #bad! substitute with outlet...
       eventos  = []
-      for item in self.data :          
+      for item in self.data :
         send_class.send(('/event/note', item.pitch, item.vel, item.dur))
-    else:      
+    else:
       send_class.send(('/event/note', self.data[0].pitch, self.data[0].vel, self.data[0].dur))
 
-  def getEditData(self, mode):  
-    if mode == 'note':      
-      edString = []
+  def getEditData(self, mode):
+    if mode == 'note':
+      notes = []
       for note in self.data:
-        edString.append(chr(97 + (note.pitch % 12))) #a...l
-      return edString
+        notes.append(note.pitch)
+      return notes
     elif mode == 'intervals':
-      edString = []
+      ints = []
       for interval in self.intervals:
-        edString.append(chr(97 + (interval % 25))) #a ... z
-      return edString
+        ints.append(interval)
+      return ints
     elif mode == 'distance':
       return bin(self.distance)
     else:
@@ -81,6 +79,6 @@ class Note:
     self.pitch = pitch
     self.dur = dur
     self.vel = vel
-  
+
   def __hash__(self):
     return hash((self.pitch, self.dur))
