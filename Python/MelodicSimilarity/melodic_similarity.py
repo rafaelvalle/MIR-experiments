@@ -10,6 +10,13 @@ from math import copysign
 import numpy as np
 
 """
+def set_trace():
+  from IPython.core.debugger import Pdb
+  import sys
+  Pdb(color_scheme='Linux').set_trace(sys._getframe().f_back)
+"""
+
+"""
 These values are based on Ebeling's interval consonance profile.
 Octaves are handled by applying a penalty based on heuristics.
 These intervals and their respective consonances are translated to durations as well.
@@ -28,6 +35,12 @@ interval_similarity = [ 1,    #0 distance in semitones
                 0.5];   #11
 
 def DTW(seqA, seqB, d = lambda x,y: perceptualDistance(x,y)):
+  if isinstance(seqA, (int,float,set)):
+    seqA = np.array(list(seqA))
+
+  if isinstance(seqB, (int,float,set)):
+    seqB = np.array(list(seqB))
+
   # create the trellis matrix
   num_rows, num_cols = len(seqA), len(seqB)
   trellis = np.zeros((num_rows, num_cols))
@@ -48,11 +61,16 @@ def DTW(seqA, seqB, d = lambda x,y: perceptualDistance(x,y)):
   return trellis[-1,-1], trellis
 
 
-def perceptualDistance(noteX, noteY):
-  if noteX == noteY:
+def perceptualDistance(eventX, eventY):
+  if isinstance(eventX, (list, np.ndarray, set)) or isinstance(eventY, (list, np.ndarray, set)) :
+    min_distance, _ = DTW(eventX, eventY)
+    return min_distance
+
+  if eventX == eventY:
     return 0
-  intervalic_distance = abs(noteX-noteY)
-  similarity = computeIntervalicSimilarity(noteX, noteY)
+
+  intervalic_distance = abs(eventX-eventY)
+  similarity = computeIntervalicSimilarity(eventX, eventY)
   octave_penalty = np.power((1 + intervalic_distance/12), 1/3.0)
   distance = np.log(similarity / octave_penalty)
   return -distance
@@ -136,3 +154,48 @@ def computeDistanceMus21(melody_a, melody_b, parameters = ['rhythm', 'harmony', 
     contour_distance, _ = DTW(lick1_intervals, lick2_intervals, intervalicDistance)
 
   return harmony_distance + rhythm_distance + contour_distance
+
+def voiceBasedSimilarity(voices1, voices2, pitch_features=['absolute', 'interval'], rhythm_features=['absolute', 'interval']):
+  pitch_similarities = {}
+  rhythm_similarities = {}
+
+  for voice1_name, voice1 in voices1.items():
+    for voice2_name, voice2 in voices2.items():
+      key_name = (str(voice1_name), str(voice2_name))
+      if 'absolute' in pitch_features:
+        distance, _ = DTW(voice1[0], voice2[0])
+        similarity = 1 / (1 + distance)
+        pitch_similarities['v%s_v%s_absolute' % key_name] = similarity
+      if 'interval' in pitch_features:
+        if any((isinstance(voice1[0],int), isinstance(voice1[0],float), \
+          isinstance(voice2[0],int), isinstance(voice2[0],float))):
+          a=1
+        else:
+          if len(voice1[0]) > 1 and len(voice2[0]) > 2:
+            lick1_np = np.array(voice1[0])
+            lick2_np = np.array(voice2[0])
+            lick1_intervals = lick1_np[1:] - lick1_np[:-1]
+            lick2_intervals = lick2_np[1:] - lick2_np[:-1]
+            if len(lick1_intervals) or len(lick2_intervals):
+              distance, _ = DTW(lick1_intervals, lick2_intervals, intervalicDistance)
+              similarity = 1 / (1 + distance)
+              pitch_similarities['v%s_v%s_interval' % key_name] = similarity
+      if 'absolute' in rhythm_features:
+        distance, _ = DTW(voice1[1], voice2[1])
+        similarity = 1 / (1 + distance)
+        rhythm_similarities['v%s_v%s_absolute' % key_name] = similarity
+      if 'interval' in rhythm_features:
+        if any((isinstance(voice1[1], int), isinstance(voice1[1],float), \
+          isinstance(voice2[1],int), isinstance(voice2[1],float))):
+          a=1
+        else:
+          if len(voice1[1]) > 1 and len(voice2[1]) > 2:  
+            lick1_np = np.array(voice1[1])
+            lick2_np = np.array(voice2[1])
+            lick1_intervals = lick1_np[1:] - lick1_np[:-1]
+            lick2_intervals = lick2_np[1:] - lick2_np[:-1]
+            if len(lick1_intervals) or len(lick2_intervals):
+              distance, _ = DTW(lick1_intervals, lick2_intervals, intervalicDistance)
+              similarity = 1 / (1 + distance)
+              pitch_similarities['v%s_v%s_interval' % key_name] = similarity
+  return (pitch_similarities, rhythm_similarities)

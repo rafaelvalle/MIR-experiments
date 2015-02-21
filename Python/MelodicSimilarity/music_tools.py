@@ -3,6 +3,48 @@ import itertools
 import music21 as m21
 import numpy as np
 
+"""
+def set_trace():
+  from IPython.core.debugger import Pdb
+  import sys
+  Pdb(color_scheme='Linux').set_trace(sys._getframe().f_back)
+"""
+
+def ftom(f):
+  """ convert frequency to midi note 
+  ARGS 
+    f: frequency(ies) in Hz > 0, <number> or numpy number array
+  RETURN
+    m: MIDI note with A 440 as reference, <float>
+  """
+  if isinstance(f, list):
+    f = np.array(f)
+  m = 17.3123405046 * np.log(.12231220585 * f) 
+  return m
+
+def freqratioToMIDIint(freqratio):
+  """ convert frequency intervals to midi intervals
+  ARGS 
+    freqratio: frequency interval(s) in Hz > 0, <number> or numpy number array
+  RETURN
+    m: MIDI intervals with A 440 as reference, <float>
+  """
+  if isinstance(f, list):
+    f = np.array(f)
+  intervals = 1200 * np.log2(freqratio)
+  return intervals
+
+def pieceAbs2pieceInt(piece):
+  piece_inter = {}
+  for key, value in piece.items():
+    if isinstance(value, set):
+      value = np.array(sorted(list(value)))
+    if len(value) > 1:      
+      piece_inter[key] = value[1:] - value[:-1]
+    else:
+      piece_inter[key] = 0
+  return piece_inter
+
 def filterByDistance(baseline, items, min_max_distance):
   filtered = []
   for item in items:
@@ -10,6 +52,58 @@ def filterByDistance(baseline, items, min_max_distance):
     if distance > min_max_distance[0] and distance < min_max_distance[1]:
       filtered.append(item)
   return filtered
+
+def minNotes4Gliss(n_halfsteps):
+  return np.log(n_halfsteps+1)*14.7
+
+def quantizeGlissando(start_note, end_note, duration):
+  """ Quantizes the pitch domain of a glissando given melodic interval and duration 
+  ARGS
+    start_note : glissando start midi note <float>
+    end_note : glissando end midi note <float>
+    duration : duration in ms <float>
+  RETURN
+    quantization : pitch quantization of glissando
+  """
+  if start_note - end_note == 0:
+    return np.array([start_note])
+  note_count = minNotes4Gliss(abs(end_note - start_note)) * duration / 1000.0
+  quantization = np.linspace(start_note, end_note, note_count)
+  return quantization
+
+
+def quantizeToShortest(piece):
+  from collections import defaultdict
+  piece_quantized = defaultdict(set) #not necessarily right, but fast and good enough
+  
+  for voice_name, voice in piece.items():
+    pitches, time = voice
+    for idx in xrange(len(pitches)-1):
+      this_event = (time[idx], time[idx+1])
+      piece_quantized[this_event].add(pitches[idx])
+
+      for global_event in piece_quantized.keys():
+        #onset within this event
+        if this_event[0] >= global_event[0] and this_event[0] < global_event[1]:
+          for note in piece_quantized[this_event]:
+            piece_quantized[global_event].add(note)
+        #note sustained within this event    
+        elif this_event[0] < global_event[0] and this_event[1] > global_event[0]:
+          for note in piece_quantized[this_event]:
+            piece_quantized[global_event].add(note)
+        
+  from collections import defaultdict
+  
+  starts = defaultdict(set)
+  for start_end, pitches in piece_quantized.items():
+    starts[start_end[0]].add(start_end[1])
+  
+  for start, values in starts.items():
+    for value in values:
+      if value > min(values):
+        del piece_quantized[(start,value)]
+
+  return piece_quantized
 
 def generate_combinations(items, low_high_limit=None):
   """
