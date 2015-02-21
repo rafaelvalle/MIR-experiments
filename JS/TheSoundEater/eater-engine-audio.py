@@ -7,7 +7,7 @@ seed_send_class = tools.SendClass()
 #outlets = 2
 
 #MODES
-DEBUG = 0,
+DEBUG = 0
 VERBOSE = 0
 CEPSTRUM = 0
 MFCC = 1    
@@ -78,7 +78,7 @@ def start(index):
 
       #output begin time, end time, mfcc, cepstrum, track, 
       outlet(0, 'state', 
-    	  target.frame.features.time,
+    	target.frame.features.time,
         target.frame.features.time + windowlength * numFrames, 
         target.frame.features.mfcc,
         target.frame.features.cepstrum,

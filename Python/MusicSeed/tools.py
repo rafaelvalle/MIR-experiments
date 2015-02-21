@@ -3,19 +3,23 @@ TOOLS
 Tools used in Music Seeds engine
 """
 
+from math import log
 import shelve
 
 try :
   import pyext
-except:
+except NameError, ImportError:
   print 'pyext not found, hopefully not running in max'
 
 class SendClass(pyext._class):
   def send(self, message = None, address = 'midiparser'):
     self._send(address, message)
-  
+
   def outlet(self, message = None, outlet = 1):
-    self._outlet(outlet,message)      
+    self._outlet(outlet,message)
+
+def ftom(f):
+  return 17.3123405046 * log(.12231220585 * f) if f>0 else -1500
 
 def roundto(number, multiple):
   return number+multiple/2 - (number+multiple/2) % multiple

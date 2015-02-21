@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -265.0, -941.0, 1049.0, 559.0 ],
+		"rect" : [ 0.0, 44.0, 1280.0, 706.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -31,16 +31,216 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 208.0, 571.0, 88.0, 20.0 ],
+					"text" : "Internal_Synth",
+					"varname" : "Internal_Synth"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-84",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1052.0, 321.0, 74.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1052.0, 318.0, 74.0, 18.0 ],
+					"text" : "11, 1 60000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-83",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 704.0, 589.0, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-79",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 649.0, 589.0, 50.0, 18.0 ],
+					"text" : "open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-54",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 649.0, 618.0, 100.0, 20.0 ],
+					"text" : "sfrecord~ 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-52",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 246.0, 336.0, 50.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 133.0, 372.0, 164.0, 20.0 ],
+					"text" : "if $i1 > $i2 then 500 else 250"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-46",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 133.0, 336.0, 68.0, 20.0 ],
+					"text" : "random 10"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-44",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 497.0, 460.0, 100.0, 20.0 ],
+					"text" : "zl.group 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-43",
+					"linecount" : 4,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 329.0, 356.0, 50.0, 58.0 ],
+					"text" : "29 100 45 100 45 100 60 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 497.0, 618.0, 45.0, 45.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1186.5, 235.5, 45.0, 45.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-27",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 591.0, 527.157593, 37.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1110.5, 262.5, 50.0, 18.0 ],
+					"text" : "open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-24",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 628.0, 527.157593, 35.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1110.5, 235.5, 50.0, 19.0 ],
+					"text" : "plug"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-25",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 8,
+					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
+					"patching_rect" : [ 497.0, 577.0, 113.5, 21.0 ],
+					"save" : [ "#N", "vst~", "loaduniqueid", 0, ";" ],
+					"text" : "vst~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 497.0, 454.0, 103.0, 32.0 ],
+					"patching_rect" : [ 651.0, 460.0, 103.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 410.5, 266.5, 103.0, 32.0 ],
+					"presentation_rect" : [ 410.5, 266.5, 103.0, 31.0 ],
 					"text" : ";\rOSC /isynth/alloff"
 				}
 
@@ -100,7 +300,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 411.0, 391.0, 75.0, 198.0 ],
+					"patching_rect" : [ 375.5, 446.0, 75.0, 198.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 170.0, 136.0, 359.040009 ]
 				}
@@ -199,7 +399,6 @@
 					"name" : "pattrstorage-ui.maxpat",
 					"numinlets" : 5,
 					"numoutlets" : 1,
-					"offset" : [ -18.0, -46.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 963.0, 474.0, 221.0, 59.0 ],
 					"presentation" : 1,
@@ -209,6 +408,7 @@
 			}
 , 			{
 				"box" : 				{
+					"autorestore" : "prob-4voices.json",
 					"fontname" : "Arial",
 					"fontsize" : 9.0,
 					"id" : "obj-81",
@@ -239,7 +439,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 983.0, 536.0, 53.0, 17.0 ],
 					"text" : "autopattr",
-					"varname" : "u727004859"
+					"varname" : "u902000526"
 				}
 
 			}
@@ -586,7 +786,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 201.0, 416.0, 20.0, 20.0 ]
+					"patching_rect" : [ 45.0, 404.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -598,7 +798,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 201.0, 360.0, 20.0, 20.0 ]
+					"patching_rect" : [ 45.0, 336.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -612,7 +812,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 221.0, 360.0, 50.0, 20.0 ]
+					"patching_rect" : [ 65.0, 336.0, 50.0, 20.0 ]
 				}
 
 			}
@@ -625,7 +825,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 201.0, 391.0, 70.0, 20.0 ],
+					"patching_rect" : [ 45.0, 367.0, 70.0, 20.0 ],
 					"text" : "metro 1000"
 				}
 
@@ -689,22 +889,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 189.0, 546.0, 120.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 410.5, 239.5, 120.0, 20.0 ],
-					"text" : "Internal_Synthesizer",
-					"varname" : "Internal_Synthesizer"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -723,7 +907,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 189.0, 506.0, 111.0, 20.0 ],
+					"patching_rect" : [ 33.0, 506.0, 111.0, 20.0 ],
 					"text" : "s voice4-gen-value"
 				}
 
@@ -736,7 +920,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 213.0, 486.0, 111.0, 20.0 ],
+					"patching_rect" : [ 57.0, 486.0, 111.0, 20.0 ],
 					"text" : "s voice3-gen-value"
 				}
 
@@ -749,7 +933,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 189.0, 466.0, 111.0, 20.0 ],
+					"patching_rect" : [ 33.0, 466.0, 111.0, 20.0 ],
 					"text" : "s voice2-gen-value"
 				}
 
@@ -762,7 +946,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 213.0, 446.0, 111.0, 20.0 ],
+					"patching_rect" : [ 57.0, 446.0, 111.0, 20.0 ],
 					"text" : "s voice1-gen-value"
 				}
 
@@ -828,6 +1012,48 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 793.0, 13.0, 243.0, 138.0 ],
 					"varname" : "prob-table[3]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 497.0, 551.157593, 122.0, 21.0 ],
+					"text" : "prepend midievent"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-34",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 497.0, 521.157593, 70.0, 21.0 ],
+					"text" : "zl group 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 7,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 497.0, 491.157593, 100.0, 21.0 ],
+					"text" : "midiformat"
 				}
 
 			}
@@ -960,6 +1186,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-43", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -973,6 +1217,60 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -1005,10 +1303,58 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 506.5, 546.157593, 506.5, 546.157593 ],
+					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 506.5, 516.157593, 506.5, 516.157593 ],
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 54.5, 396.0, 37.5, 396.0, 37.5, 318.0, 142.5, 318.0 ],
+					"source" : [ "obj-45", 0 ]
 				}
 
 			}
@@ -1023,10 +1369,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-45", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 142.5, 401.0, 123.5, 401.0, 123.5, 326.0, 74.5, 326.0 ],
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
@@ -1072,6 +1437,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-48", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-52", 0 ]
 				}
 
 			}
@@ -1329,6 +1703,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-79", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1337,166 +1720,170 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-83", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-84", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "prob-table.maxpat",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "Internal_Synthesizer.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pstore-simple-storage.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Storage/pstore-simple-storage",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Storage/pstore-simple-storage",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "clavecin.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "letter.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "inst-to-pgm.txt",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "nothing.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/basic-programming",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/basic-programming",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "manage_notes.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cc-to-cc.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "badge.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "uc_license.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cnmat_blue.gif",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "GIFf",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "myNotes.js",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "take_notes.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "banner.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cnmat_wht-trans.png",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "make-tune.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "durations.mxt",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/repertoire/Michael_Zbyszynski/Daguerreotype",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/repertoire/Michael_Zbyszynski/Daguerreotype",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "OSC-unroute.js",
-				"bootpath" : "/Applications/Max 6.1/externals/CNMAT-Everything-OSX-MachO",
-				"patcherrelativepath" : "../../../../../Applications/Max 6.1/externals/CNMAT-Everything-OSX-MachO",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "notes-to-coll.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
+				"name" : "prob-4voices.json",
+				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage-ui.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "readwrite-ui.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "badge.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "uc_license.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cnmat_blue.gif",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"type" : "GIFf",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "ali.remove-char.js",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_transformation",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_transformation",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Internal_Synth.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pstore-simple-storage.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_storage/pstore-simple-storage",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_storage/pstore-simple-storage",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "clavecin.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "letter.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "inst-to-pgm.txt",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "nothing.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/basic_programming",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/basic_programming",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "manage_notes.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cc-to-cc.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "banner.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "cnmat_wht-trans.png",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "make-tune.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "durations.mxt",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/repertoire/Michael_Zbyszynski/Daguerreotype",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/repertoire/Michael_Zbyszynski/Daguerreotype",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "notes-to-coll.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

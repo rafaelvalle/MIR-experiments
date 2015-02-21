@@ -3,12 +3,11 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 1,
-			"revision" : 3,
-			"architecture" : "x86"
+			"minor" : 0,
+			"revision" : 8
 		}
 ,
-		"rect" : [ -247.0, -1062.0, 1700.0, 981.0 ],
+		"rect" : [ 0.0, 44.0, 1280.0, 706.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +27,66 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-27",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 932.25, 312.5, 87.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 930.5, 312.5, 87.0, 20.0 ],
+					"text" : "record"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1055.0, 911.0, 50.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 930.5, 338.0, 50.0, 18.0 ],
+					"text" : "open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1112.0, 911.0, 20.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 987.5, 338.0, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 1055.0, 959.0, 100.0, 20.0 ],
+					"text" : "sfrecord~ 2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -158,9 +217,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 7.0, -929.0, 943.0, 247.0 ],
@@ -190,8 +248,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 829.0, 21.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 828.0, 1.0, 0.0, 0.0 ]
+									"patching_rect" : [ 829.0, 21.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -205,7 +262,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 859.0, 21.0, 69.0, 20.0 ],
-									"presentation_rect" : [ 1030.0, 15.0, 0.0, 0.0 ],
 									"text" : "r rand-num"
 								}
 
@@ -858,9 +914,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 21.0, 99.0, 936.0, 166.0 ],
@@ -937,8 +992,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 160.0, 20.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 159.0, 17.0, 0.0, 0.0 ]
+									"patching_rect" : [ 160.0, 20.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -950,8 +1004,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 272.0, 152.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 277.0, 76.0, 0.0, 0.0 ]
+									"patching_rect" : [ 272.0, 152.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -1018,8 +1071,8 @@
 									"presentation_rect" : [ 630.0, 50.5, 275.0, 74.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_longname" : "hihats[3]",
 											"parameter_shortname" : "multislider",
+											"parameter_longname" : "hihats[3]",
 											"parameter_type" : 3,
 											"parameter_invisible" : 1
 										}
@@ -1099,8 +1152,8 @@
 									"presentation_rect" : [ 328.0, 50.5, 275.0, 74.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_longname" : "hihats[2]",
 											"parameter_shortname" : "multislider",
+											"parameter_longname" : "hihats[2]",
 											"parameter_type" : 3,
 											"parameter_invisible" : 1
 										}
@@ -1515,8 +1568,8 @@
 									"presentation_rect" : [ 29.0, 50.5, 275.0, 74.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_longname" : "hihats[1]",
 											"parameter_shortname" : "multislider",
+											"parameter_longname" : "hihats[1]",
 											"parameter_type" : 3,
 											"parameter_invisible" : 1
 										}
@@ -2055,9 +2108,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 817.0, 143.0, 363.0, 414.0 ],
@@ -2392,9 +2444,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 817.0, 143.0, 363.0, 414.0 ],
@@ -2742,9 +2793,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 817.0, 143.0, 363.0, 414.0 ],
@@ -3078,9 +3128,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 0.0, 45.0, 780.0, 444.0 ],
@@ -3726,9 +3775,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 912.0, 74.0, 327.0, 427.0 ],
@@ -4086,9 +4134,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 173.0, 200.0, 363.0, 414.0 ],
@@ -4446,9 +4493,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 578.0, 146.0, 380.0, 462.0 ],
@@ -4782,9 +4828,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 0.0, 44.0, 1920.0, 1012.0 ],
@@ -6855,9 +6900,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ -197.0, -716.0, 244.0, 175.0 ],
@@ -6892,9 +6936,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 1,
-											"revision" : 3,
-											"architecture" : "x86"
+											"minor" : 0,
+											"revision" : 8
 										}
 ,
 										"rect" : [ 50.0, -647.0, 873.0, 401.0 ],
@@ -7166,7 +7209,7 @@
 													}
 ,
 													"text" : "autopattr",
-													"varname" : "u271001127"
+													"varname" : "u747001041"
 												}
 
 											}
@@ -7470,9 +7513,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 6,
-											"minor" : 1,
-											"revision" : 3,
-											"architecture" : "x86"
+											"minor" : 0,
+											"revision" : 8
 										}
 ,
 										"rect" : [ 19.0, 163.0, 1261.0, 628.0 ],
@@ -7731,7 +7773,7 @@
 													}
 ,
 													"text" : "autopattr",
-													"varname" : "u746001125"
+													"varname" : "u414001043"
 												}
 
 											}
@@ -8100,9 +8142,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 1,
-							"revision" : 3,
-							"architecture" : "x86"
+							"minor" : 0,
+							"revision" : 8
 						}
 ,
 						"rect" : [ 288.0, -597.0, 963.0, 380.0 ],
@@ -8366,7 +8407,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 681.0, 152.0, 100.0, 20.0 ],
-									"prefix" : "liferaid:/DESKTOP/MIR/ProbabilityDistribution/DEMO/audio_files/actC/",
+									"prefix" : "liferaid:/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO/audio_files/actC/",
 									"types" : "AIFF"
 								}
 
@@ -8613,7 +8654,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 390.0, 152.0, 100.0, 20.0 ],
-									"prefix" : "liferaid:/DESKTOP/MIR/ProbabilityDistribution/DEMO/audio_files/actB/",
+									"prefix" : "liferaid:/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO/audio_files/actB/",
 									"types" : "AIFF"
 								}
 
@@ -8872,7 +8913,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 111.0, 152.0, 100.0, 20.0 ],
-									"prefix" : "liferaid:/DESKTOP/MIR/ProbabilityDistribution/DEMO/audio_files/actA/",
+									"prefix" : "liferaid:/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO/audio_files/actA/",
 									"types" : "AIFF"
 								}
 
@@ -9617,7 +9658,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 73.25, 950.0, 59.5, 20.0 ],
 					"restore" : 					{
-						"duration_deviation" : [ 0.1 ],
+						"duration_deviation" : [ 0.05 ],
 						"hihat" : [ 72.839508, 4.938272, 75.0, 4.938272, 73.611115, 4.938272, 73.611115, 4.938272, 73.611115, 4.938272, 76.388885, 6.17284, 75.0, 4.938272, 76.388885, 3.703704, 76.388885, 3.703704, 75.0, 3.703704, 75.0, 3.703704, 74.074074, 4.938272, 75.30864, 3.703704, 70.833336, 3.703704, 72.222221, 4.938272, 72.222221, 4.938272 ],
 						"kd" : [ 100.0, 81.944443, 75.0, 68.055557, 83.333336, 68.055557, 59.722221, 51.388889, 75.0, 65.277779, 55.555557, 47.222221, 65.277779, 48.611111, 38.888889, 0.0, 97.560974, 0.0, 0.0, 0.0, 96.341461, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 						"sd" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 96.341461, 0.0, 0.0, 0.0, 0.0, 0.0, 91.463417, 0.0, 0.0, 0.0, 91.463417, 0.0, 0.0, 0.0, 0.0, 0.0, 98.780487, 75.0, 65.277779, 59.722221, 90.277779, 79.166664, 69.444443, 59.722221 ],
@@ -9626,7 +9667,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u265001129"
+					"varname" : "u642001139"
 				}
 
 			}
@@ -10081,8 +10122,8 @@
 					"presentation_rect" : [ 321.0, 154.5, 275.0, 74.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "kickdrum",
 							"parameter_shortname" : "multislider",
+							"parameter_longname" : "kickdrum",
 							"parameter_type" : 3,
 							"parameter_invisible" : 1
 						}
@@ -10118,7 +10159,7 @@
 			}
 , 			{
 				"box" : 				{
-					"hint" : "x 19 y 1",
+					"hint" : "x 8 y 49",
 					"id" : "obj-161",
 					"legend" : 0,
 					"maxclass" : "itable",
@@ -10308,8 +10349,8 @@
 					"presentation_rect" : [ 611.0, 154.5, 275.0, 74.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "snaredrum",
 							"parameter_shortname" : "multislider",
+							"parameter_longname" : "snaredrum",
 							"parameter_type" : 3,
 							"parameter_invisible" : 1
 						}
@@ -10345,7 +10386,7 @@
 			}
 , 			{
 				"box" : 				{
-					"hint" : "x 18 y 16",
+					"hint" : "x 19 y 87",
 					"id" : "obj-127",
 					"legend" : 0,
 					"maxclass" : "itable",
@@ -10713,8 +10754,8 @@
 					"presentation_rect" : [ 32.0, 154.5, 275.0, 74.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "hihats",
 							"parameter_shortname" : "multislider",
+							"parameter_longname" : "hihats",
 							"parameter_type" : 3,
 							"parameter_invisible" : 1
 						}
@@ -10750,7 +10791,7 @@
 			}
 , 			{
 				"box" : 				{
-					"hint" : "x 0 y 92",
+					"hint" : "x 20 y 72",
 					"id" : "obj-32",
 					"legend" : 0,
 					"maxclass" : "itable",
@@ -11357,6 +11398,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-215", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -11475,6 +11525,24 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-142", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-145", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-145", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-145", 0 ]
@@ -11623,6 +11691,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -12244,143 +12321,143 @@
  ],
 		"parameters" : 		{
 			"obj-56::obj-72" : [ "hihats[2]", "multislider", 0 ],
-			"obj-124" : [ "snaredrum", "multislider", 0 ],
-			"obj-158" : [ "kickdrum", "multislider", 0 ],
-			"obj-56::obj-89" : [ "hihats[1]", "multislider", 0 ],
+			"obj-52" : [ "hihats", "multislider", 0 ],
 			"obj-56::obj-78" : [ "hihats[3]", "multislider", 0 ],
-			"obj-52" : [ "hihats", "multislider", 0 ]
+			"obj-158" : [ "kickdrum", "multislider", 0 ],
+			"obj-124" : [ "snaredrum", "multislider", 0 ],
+			"obj-56::obj-89" : [ "hihats[1]", "multislider", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "prob-drums-timbre-interp-32timesteps.json",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage-ui.maxpat",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "readwrite-ui.maxpat",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "badge.maxpat",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "uc_license.maxpat",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cnmat_blue.gif",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
 				"type" : "GIFf",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "myNotes.js",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "take_notes.maxpat",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ali.remove-char.js",
 				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
-				"patcherrelativepath" : "../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
+				"patcherrelativepath" : "../../../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "rvLine.maxpat",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../../Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "FIFO.js",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../../Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "deviator.maxpat",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../../Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "timbre-prob-interp-2.json",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "timbre-prob-interp-1.json",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundPoly1.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundPoly2.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundPoly3.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundPoly4.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "learner.js",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution/DEMO",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR-experiments/MMJ/ProbabilityDistribution/DEMO",
+				"patcherrelativepath" : "",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

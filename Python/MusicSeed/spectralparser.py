@@ -1,11 +1,15 @@
 """
 Spectral Parser
-Receives spectral data and feature type (MFCC, Barycenter) and adds it to an array.
+Receives spectral data and feature type (MFCC, Barycenter...) and adds it to an array.
 Extracts features from audio file
 Stores FFT size, HOP size and sampling rate as global variables
 """
 
-import tools
+try:
+  import tools
+except:
+  print 'tools not imported'
+
 from bregman.suite import *
 
 #########################
@@ -26,13 +30,13 @@ sr = 44100
 features = ['mfcc', 'pitch', 'zerocross', 'brightness', 'centroid', 'rolloff', 'rms']
 
 #MFCC
-ncoef = 38
+ncoef = 10
 log10 = True
 
 #CHROMA
 intensify = True
 
-frames = {} # {feature : data matrix}
+features = {} # {feature : data matrix}
 
 
 #########################
@@ -40,8 +44,8 @@ frames = {} # {feature : data matrix}
 #########################
 
 def add_event(frame, feature = 'pitch'):
-  global frames
-  frames[key].append(frame)
+  global features
+  features[key].append(frame)
 
 
 #################
@@ -49,8 +53,7 @@ def add_event(frame, feature = 'pitch'):
 #################
 
 def extract_audio_features(filepath):
-  global fftsize, hopsize, nfft, ncoef, log10    
-  features = {}
+  global fftsize, hopsize, nfft, ncoef, log10, features
 
   mfcc = MelFrequencyCepstrum(filepath, ncoef=ncoef, log10=log10, nfft=fftsize,wfft=fftsize, nhop=hopsize)
   features['mfcc'] = mfcc.X[:]
@@ -68,15 +71,20 @@ def extract_audio_features(filepath):
   features['chroma'] = chroma.X[:]
   del chroma
 
-  features['zerocrossings'] = zerocrossings(filepath, fftsize, hopsize)
+  #features['zerocrossings'] = zerocrossings(filepath, fftsize, hopsize)
   features['num_events'] = len(features['centroid'])
 
-  return features
+def extract_mfcc(filepath = '/noise.wav'):
+  global fftsize, hopsize, nfft, ncoef, log10, features
+  mfcc = MelFrequencyCepstrum(filepath, ncoef=ncoef, log10=log10, nfft=fftsize,wfft=fftsize, nhop=hopsize)
+  print mfcc.X
+  return mfcc.X
+  del mfcc
 
 def set_fftsize(n):
-    global fftsize
-    fftsize = n
+  global fftsize
+  fftsize = n
 
 def set_hopsize(n):
-    global hopsize
-    hopsize = n    
+  global hopsize
+  hopsize = n    

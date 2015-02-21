@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 8,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -322.0, -1058.0, 1920.0, 1012.0 ],
+		"rect" : [ -359.0, -1058.0, 1920.0, 1012.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,24 +28,6 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-16",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1335.0, 328.5, 150.0, 47.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 3,
-					"presentation_rect" : [ 898.0, 629.0, 150.0, 47.0 ],
-					"text" : "write prob-drums-32timesteps.json"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -75,7 +57,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 708.25, 68.530029, 181.0, 50.0 ],
-					"text" : "write prob-drums-32timesteps.json"
+					"text" : "read prob-drums-32timesteps.json"
 				}
 
 			}
@@ -215,7 +197,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 8,
 							"architecture" : "x86"
 						}
 ,
@@ -284,7 +266,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -661,7 +643,7 @@
 									}
 ,
 									"text" : "autopattr",
-									"varname" : "u525000900"
+									"varname" : "u303001530"
 								}
 
 							}
@@ -679,7 +661,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -912,7 +894,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 8,
 											"architecture" : "x86"
 										}
 ,
@@ -1193,7 +1175,6 @@
 							}
 , 							{
 								"box" : 								{
-									"autorestore" : "timbre-prob-3.json",
 									"fontname" : "Arial",
 									"fontsize" : 9.0,
 									"id" : "obj-17",
@@ -1208,9 +1189,9 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 395.0, 196.0, 112.0, 17.0 ],
 									"saved_object_attributes" : 									{
-										"client_rect" : [ 4, 44, 358, 172 ],
+										"client_rect" : [ 30, 89, 743, 623 ],
 										"parameter_enable" : 0,
-										"storage_rect" : [ 766, 44, 1220, 302 ]
+										"storage_rect" : [ 0, 0, 640, 240 ]
 									}
 ,
 									"text" : "pattrstorage timbreprob",
@@ -1608,18 +1589,18 @@
 					"patching_rect" : [ 44.25, 860.0, 59.5, 20.0 ],
 					"restore" : 					{
 						"duration_deviation" : [ 0.05 ],
-						"hihat" : [ 86.111115, 1.234568, 83.333336, 3.703704, 83.333336, 6.17284, 69.135803, 4.938272, 81.944443, 6.17284, 81.944443, 7.407407, 79.166664, 8.641975, 71.604935, 9.876543, 79.166664, 8.641975, 77.777779, 8.641975, 79.166664, 8.641975, 70.370369, 8.641975, 81.944443, 6.17284, 80.555557, 7.407407, 81.944443, 11.111111, 71.604935, 7.407407 ],
-						"kd" : [ 98.780487, 8.333333, 8.333333, 95.121948, 11.111111, 14.634147, 52.439026, 15.853659, 95.121948, 12.5, 15.853659, 91.463417, 13.414634, 8.536586, 58.536587, 8.536586, 100.0, 11.111111, 11.111111, 90.243904, 12.195122, 8.536586, 51.219513, 7.317073, 98.780487, 9.722222, 11.111111, 91.463417, 10.97561, 6.097561, 56.097561, 6.097561 ],
+						"hihat" : [ 0.0, 0.0, 100.0, 70.370369, 1.234568, 0.0, 100.0, 0.0, 0.0, 0.0, 100.0, 0.0, 0.0, 74.074074, 100.0, 1.234568, 2.469136, 3.703704, 98.765434, 4.526749, 4.938272, 5.555555, 100.0, 75.30864, 6.17284, 6.17284, 97.530861, 5.349794, 4.938272, 70.370369, 100.0, 2.469136 ],
+						"kd" : [ 93.902435, 8.333333, 12.5, 13.888889, 74.390244, 15.277778, 19.444445, 22.222221, 57.317074, 22.222221, 26.388889, 27.777779, 40.243904, 25.0, 31.944445, 36.111111, 97.560974, 0.0, 0.0, 0.0, 96.341461, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 						"kd[1]" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 						"menu-bd" : [ 1 ],
 						"menu-extra" : [ 16 ],
-						"sd" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 86.585365, 15.853659, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 78.048782, 20.731707, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100.0, 14.634147, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 82.926826, 14.634147 ],
-						"timestep-duration" : [ 112 ],
+						"sd" : [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 96.341461, 0.0, 0.0, 0.0, 0.0, 0.0, 46.341465, 0.0, 0.0, 0.0, 87.804878, 0.0, 0.0, 0.0, 0.0, 0.0, 98.780487, 25.0, 33.333332, 44.444443, 78.048782, 55.555557, 62.5, 68.055557 ],
+						"timestep-duration" : [ 100 ],
 						"timesteps" : [ 32 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u711000902"
+					"varname" : "u464001532"
 				}
 
 			}
@@ -1633,7 +1614,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 444.25, -2.469971, 112.0, 33.0 ],
+					"patching_rect" : [ 29.25, 517.0, 112.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 434.25, 49.530029, 158.0, 20.0 ],
 					"text" : "interpolate between presets"
@@ -1983,7 +1964,7 @@
 			}
 , 			{
 				"box" : 				{
-					"hint" : "x 13 y 14",
+					"hint" : "x 3 y 68",
 					"id" : "obj-228",
 					"legend" : 0,
 					"maxclass" : "itable",
@@ -2012,7 +1993,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 84.25, 6.530029, 67.0, 20.0 ],
+					"patching_rect" : [ 1354.1875, 537.5, 62.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 144.25, 68.530029, 62.0, 20.0 ],
 					"text" : "timesteps"
@@ -2086,7 +2067,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1129.75, 487.000061, 103.0, 32.0 ],
+					"patching_rect" : [ 1129.75, 487.000061, 103.0, 31.0 ],
 					"text" : ";\rOSC /isynth/alloff"
 				}
 
@@ -2347,7 +2328,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1366.0, 548.5, 50.0, 20.0 ],
+					"patching_rect" : [ 1366.0, 556.5, 50.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 76.500008, 68.530029, 50.0, 20.0 ],
 					"triangle" : 0,
@@ -2376,10 +2357,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1129.75, 428.500061, 123.5, 20.0 ],
+					"patching_rect" : [ 1129.75, 428.500061, 88.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 948.25, 69.030029, 123.5, 20.0 ],
-					"text" : "Internal_Synthesizer",
+					"presentation_rect" : [ 948.25, 69.030029, 88.0, 20.0 ],
+					"text" : "Internal_Synth",
 					"varname" : "Internal_Synthesizer"
 				}
 
@@ -2700,7 +2681,7 @@
 					"presentation_rect" : [ 310.0, 278.5, 275.0, 74.0 ],
 					"range" : 101,
 					"size" : 32,
-					"table_data" : [ 0, 98, 8, 8, 95, 11, 14, 52, 15, 95, 12, 15, 91, 13, 8, 58, 8, 100, 11, 11, 90, 12, 8, 51, 7, 98, 9, 11, 91, 10, 6, 56, 6 ]
+					"table_data" : [ 0, 93, 8, 12, 13, 74, 15, 19, 22, 57, 22, 26, 27, 40, 25, 31, 36, 97, 0, 0, 0, 96, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 				}
 
 			}
@@ -2940,7 +2921,7 @@
 					"presentation_rect" : [ 600.0, 278.5, 275.0, 74.0 ],
 					"range" : 101,
 					"size" : 32,
-					"table_data" : [ 0, 0, 0, 0, 0, 0, 0, 86, 15, 0, 0, 0, 0, 0, 0, 78, 20, 0, 0, 0, 0, 0, 0, 100, 14, 0, 0, 0, 0, 0, 0, 82, 14 ]
+					"table_data" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 96, 0, 0, 0, 0, 0, 46, 0, 0, 0, 87, 0, 0, 0, 0, 0, 98, 25, 33, 44, 78, 55, 62, 68 ]
 				}
 
 			}
@@ -3318,7 +3299,7 @@
 					"presentation_rect" : [ 21.0, 278.5, 275.0, 74.0 ],
 					"range" : 101,
 					"size" : 32,
-					"table_data" : [ 0, 86, 1, 83, 3, 83, 6, 69, 4, 81, 6, 81, 7, 79, 8, 71, 9, 79, 8, 77, 8, 79, 8, 70, 8, 81, 6, 80, 7, 81, 11, 71, 7 ]
+					"table_data" : [ 0, 0, 0, 100, 70, 1, 0, 100, 0, 0, 0, 100, 0, 0, 74, 100, 1, 2, 3, 98, 4, 4, 5, 100, 75, 6, 6, 97, 5, 4, 70, 100, 2 ]
 				}
 
 			}
@@ -3434,9 +3415,9 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 708.25, 130.530029, 112.0, 17.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 358, 172 ],
+						"client_rect" : [ 30, 89, 743, 623 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 766, 44, 1220, 302 ]
+						"storage_rect" : [ 0, 0, 640, 240 ]
 					}
 ,
 					"text" : "pattrstorage onsetprob",
@@ -4914,15 +4895,15 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-52" : [ "hihats", "multislider", 0 ],
 			"obj-226" : [ "kickdrum[1]", "multislider", 0 ],
 			"obj-124" : [ "snaredrum", "multislider", 0 ],
-			"obj-158" : [ "kickdrum", "multislider", 0 ]
+			"obj-158" : [ "kickdrum", "multislider", 0 ],
+			"obj-52" : [ "hihats", "multislider", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "prob-drums-32timesteps.json",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution",
+				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/MIR-experiments/MMJ/ProbabilityDistribution",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -4930,182 +4911,154 @@
 , 			{
 				"name" : "rvLine.maxpat",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "FIFO.js",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../Eletronica/MAX/rafaelvalle",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "Internal_Synthesizer.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth",
+				"name" : "Internal_Synth.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pstore-simple-storage.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Storage/pstore-simple-storage",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Storage/pstore-simple-storage",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_storage/pstore-simple-storage",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_storage/pstore-simple-storage",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "clavecin.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "letter.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "inst-to-pgm.txt",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "nothing.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/basic-programming",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/basic-programming",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "manage_notes.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cc-to-cc.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "badge.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/basic_programming",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/basic_programming",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "uc_license.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cnmat_blue.gif",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
 				"type" : "GIFf",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "myNotes.js",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"type" : "TEXT",
+				"name" : "manage_notes.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "take_notes.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"name" : "cc-to-cc.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "badge.maxpat",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "banner.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cnmat_wht-trans.png",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Depot_Support",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/depot_support",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "make-tune.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "durations.mxt",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/repertoire/Michael_Zbyszynski/Daguerreotype",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/repertoire/Michael_Zbyszynski/Daguerreotype",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "OSC-unroute.js",
-				"bootpath" : "/Applications/Max 6.1/externals/CNMAT-Everything-OSX-MachO",
-				"patcherrelativepath" : "../../../../../Applications/Max 6.1/externals/CNMAT-Everything-OSX-MachO",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/repertoire/Michael_Zbyszynski/Daguerreotype",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/repertoire/Michael_Zbyszynski/Daguerreotype",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "notes-to-coll.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/applications/internal_synth/lib",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/examples/applications/internal_synth/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "deviator.maxpat",
 				"bootpath" : "/Volumes/liferaid/Eletronica/MAX/rafaelvalle",
-				"patcherrelativepath" : "../../../Eletronica/MAX/rafaelvalle",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "timbre-prob-3.json",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/MIR/ProbabilityDistribution",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../../../../../Eletronica/MAX/rafaelvalle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pattrstorage-ui.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "readwrite-ui.maxpat",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Interface",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/interface",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ali.remove-char.js",
-				"bootpath" : "/Volumes/liferaid/DESKTOP/Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
-				"patcherrelativepath" : "../../Coding/CNMAT-MMJ-Depot-WORKED/modules/Data_Transformation",
+				"bootpath" : "/Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_transformation",
+				"patcherrelativepath" : "../../../../../../../Users/rafaelvalle/Documents/Max/Packages/CNMAT-MMJ-Depot-3.1.0/patchers/data_transformation",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
